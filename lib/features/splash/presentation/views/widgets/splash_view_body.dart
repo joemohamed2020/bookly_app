@@ -1,8 +1,9 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/get_navigation/src/routes/default_transitions.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -18,12 +19,26 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    initFadingAnimation();
+  }
+
+  void initFadingAnimation() async{
     animationController =
-        AnimationController(vsync: this, duration: const Duration(seconds: 2));
+        AnimationController(vsync: this, duration: const Duration(seconds: 3));
     fadingAnimation =
         Tween<double>(begin: 0.0, end: 1.0).animate(animationController);
-    animationController.forward();
+    await animationController.forward();
+    await Get.to(const HomeView(),transition: Transition.fade,duration: const Duration(seconds: 2));
   }
+
+  // void initScalingAnimation() async{
+  //   animationController = AnimationController(
+  //       vsync: this, duration: const Duration(milliseconds: 700));
+  //   fadingAnimation =
+  //       Tween<double>(begin: 0.85, end: 1.25).animate(animationController);
+  //   await animationController.forward();
+  //   await animationController.reverse();
+  // }
 
   @override
   void dispose() {
