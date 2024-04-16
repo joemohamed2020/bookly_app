@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 class BookWidget extends StatelessWidget {
   const BookWidget({
     super.key,
-    this.height = 180,
-    this.width = 120,
+    this.height = 120,
+    this.width = 90,
     this.playbutton = false,
   });
   final double height;
@@ -21,12 +21,15 @@ class BookWidget extends StatelessWidget {
           width: width,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/Book1.png"),
+              image: AssetImage("assets/images/Book3.png"),
             ),
           ),
         ),
         playbutton
-            ? const Positioned(top: 140, left: 80, child: BluredIconButtonWidget())
+            ? Positioned(
+                top: height - 40,
+                left: width - 40,
+                child: const BluredIconButtonWidget())
             : Container()
       ]),
     );
