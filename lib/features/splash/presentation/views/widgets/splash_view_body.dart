@@ -1,8 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/features/home/presentation/views/home_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -28,7 +26,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     fadingAnimation =
         Tween<double>(begin: 0.0, end: 1.0).animate(animationController);
     await animationController.forward();
-    await Get.to(const HomeView(),transition: Transition.fade,duration: const Duration(seconds: 2));
+    await Get.off(const HomeView(),transition: Transition.fade,duration: const Duration(seconds: 2));
   }
 
   // void initScalingAnimation() async{

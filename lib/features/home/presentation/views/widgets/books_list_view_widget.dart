@@ -9,16 +9,15 @@ class BooksListViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: double.infinity,
-        height: 224,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height * 0.25,
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),
           itemCount: 20,
           scrollDirection: Axis.horizontal,
           itemBuilder: (BuildContext context, int index) {
-            return const BookWidget(
-              height: 210,
-              width: 134,
+            return BookWidget(
+              height: MediaQuery.of(context).size.height * 0.25,
               playbutton: true,
             );
           },
