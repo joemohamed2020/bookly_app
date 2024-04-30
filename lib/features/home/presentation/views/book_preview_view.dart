@@ -3,7 +3,7 @@ import 'package:bookly_app/core/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/also_like_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class BookPreviewView extends StatelessWidget {
   const BookPreviewView({super.key});
@@ -19,7 +19,7 @@ class BookPreviewView extends StatelessWidget {
             icon: const Icon(Icons.close),
             iconSize: 30,
             onPressed: () {
-              Get.back();
+              GoRouter.of(context).pop();
             },
           ),
         ),

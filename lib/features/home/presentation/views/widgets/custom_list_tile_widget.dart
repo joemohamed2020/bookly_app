@@ -1,11 +1,7 @@
-import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/book_preview_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/rating_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
 
 class CustomListTile extends StatelessWidget {
   const CustomListTile({
@@ -18,11 +14,11 @@ class CustomListTile extends StatelessWidget {
       padding: const EdgeInsets.only(right: 8),
       child: GestureDetector(
         onTap: () {
-          Get.to(
-            const BookPreviewView(),
-            transition: Transition.fade,
-            duration: const Duration(seconds: 2),
-          );
+          // Get.to(
+          //   const BookPreviewView(),
+          //   transition: Transition.fade,
+          //   duration: const Duration(seconds: 2),
+          // );
         },
         child: Row(
           children: [
