@@ -13,7 +13,7 @@ class AlsoLikeListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {
-          return BookWidget(height: MediaQuery.of(context).size.height * 0.14);
+          return BookWidget(width: MediaQuery.of(context).size.width * 0.19);
         },
       ),
     );

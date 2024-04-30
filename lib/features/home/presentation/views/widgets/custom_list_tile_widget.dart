@@ -23,7 +23,7 @@ class CustomListTile extends StatelessWidget {
         child: Row(
           children: [
             BookWidget(
-              height: MediaQuery.of(context).size.height * 0.15,
+              width: MediaQuery.of(context).size.width * 0.19,
             ),
             const SizedBox(
               width: 30,

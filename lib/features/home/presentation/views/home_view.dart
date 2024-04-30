@@ -1,9 +1,7 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_list_view_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_list_view_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

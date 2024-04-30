@@ -1,7 +1,8 @@
-
 import 'dart:ui';
 
+import 'package:bookly_app/core/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BluredIconButtonWidget extends StatelessWidget {
   const BluredIconButtonWidget({
@@ -23,7 +24,9 @@ class BluredIconButtonWidget extends StatelessWidget {
                 backgroundColor:
                     MaterialStatePropertyAll(Colors.white.withOpacity(0.0))),
             iconSize: 20,
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.bookPreviewRoute);
+            },
             icon: const Icon(
               Icons.play_arrow,
               color: Colors.white,

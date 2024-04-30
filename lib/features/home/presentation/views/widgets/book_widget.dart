@@ -1,3 +1,4 @@
+import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/app_router.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/blured_icon_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +8,9 @@ class BookWidget extends StatelessWidget {
   const BookWidget({
     super.key,
     this.playbutton = false,
-    required this.height,
+    required this.width,
   });
-  final double height;
+  final double width;
   final bool playbutton;
   @override
   Widget build(BuildContext context) {
@@ -20,9 +21,9 @@ class BookWidget extends StatelessWidget {
           GoRouter.of(context).push(AppRouter.bookPreviewRoute);
         },
         child: SizedBox(
-          height: height,
+          width: width,
           child: AspectRatio(
-            aspectRatio: 2.7 / 4,
+            aspectRatio: aspect,
             child: Stack(children: [
               Container(
                 decoration: const BoxDecoration(
@@ -34,8 +35,8 @@ class BookWidget extends StatelessWidget {
               ),
               playbutton
                   ? Positioned(
-                      top: height - 40,
-                      left: ((2.7 / 4) * height) - 40,
+                      top: ((1 / aspect) * width) - 40,
+                      left: width - 40,
                       child: const BluredIconButtonWidget())
                   : Container()
             ]),
