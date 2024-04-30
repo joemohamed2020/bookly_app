@@ -11,11 +11,10 @@ class BestSellerListViewWidget extends StatelessWidget {
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      scrollDirection: Axis.vertical,
       itemCount: 10,
       itemBuilder: (context, index) {
         return const Padding(
-          padding: EdgeInsets.only(bottom: 16.0),
+          padding: EdgeInsets.symmetric(vertical: 10.0),
           child: CustomListTile(),
         );
       },

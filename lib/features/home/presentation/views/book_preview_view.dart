@@ -1,12 +1,12 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/styles.dart';
-import 'package:bookly_app/features/book_preview/presentation/views/widgets/also_like_list_view.dart';
-import 'package:bookly_app/features/book_preview/presentation/views/widgets/custom_button.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/also_like_list_view.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BookPreview extends StatelessWidget {
-  const BookPreview({super.key});
+class BookPreviewView extends StatelessWidget {
+  const BookPreviewView({super.key});
 
   @override
   Widget build(BuildContext context) {

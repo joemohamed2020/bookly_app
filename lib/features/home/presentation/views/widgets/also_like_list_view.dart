@@ -7,13 +7,13 @@ class AlsoLikeListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.14,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {
-          return BookWidget(height: MediaQuery.of(context).size.height * 0.15);
+          return BookWidget(height: MediaQuery.of(context).size.height * 0.14);
         },
       ),
     );

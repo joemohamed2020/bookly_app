@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/book_preview/presentation/views/book_preview.dart';
+import 'package:bookly_app/features/home/presentation/views/book_preview_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/blured_icon_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +17,7 @@ class BookWidget extends StatelessWidget {
       padding: const EdgeInsets.only(right: 8.0),
       child: GestureDetector(
         onTap: () {
-          Get.to(const BookPreview(),
+          Get.to(const BookPreviewView(),
               transition: Transition.fade,
               duration: const Duration(seconds: 2));
         },

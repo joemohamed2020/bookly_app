@@ -1,7 +1,9 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_list_view_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_list_view_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -31,33 +33,42 @@ class HomeView extends StatelessWidget {
             )
           ],
         ),
-        body: const Padding(
-            padding: EdgeInsets.only(top: 16, left: 24),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 32,
-                  ),
-                  BooksListViewWidget(),
-                  SizedBox(
-                    height: 32,
-                  ),
-                  Text(
+        body:
+            const CustomScrollView(physics: BouncingScrollPhysics(), slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 32,
+                ),
+                BooksListViewWidget(),
+                SizedBox(
+                  height: 32,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 30.0),
+                  child: Text(
                     "Best Seller",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
                         color: Colors.white),
                   ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  BestSellerListViewWidget()
-                ],
-              ),
-            )),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+              ],
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.only(right: 47, left: 30),
+              child: BestSellerListViewWidget(),
+            ),
+          )
+        ]),
       ),
     );
   }
