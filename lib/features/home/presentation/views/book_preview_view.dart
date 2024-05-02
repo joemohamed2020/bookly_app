@@ -49,7 +49,7 @@ class BookPreviewView extends StatelessWidget {
                   child: BookWidget(width: MediaQuery.of(context).size.width),
                 ),
                 const SizedBox(
-                  height: 45,
+                  height: 43,
                 ),
                 const Text("The Jungle Book", style: Styles.textStyle30),
                 const SizedBox(
