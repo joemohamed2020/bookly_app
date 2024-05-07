@@ -3,6 +3,7 @@ import 'package:bookly_app/core/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/also_like_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_button.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/rating_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -55,25 +56,14 @@ class BookPreviewView extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                const Text("Rudyard Kipling", style: Styles.textStyle18),
+                Text("Rudyard Kipling",
+                    style: Styles.textStyle18
+                        .copyWith(fontStyle: FontStyle.italic)),
                 const SizedBox(
                   height: 16,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      child: const Icon(
-                        Icons.star,
-                        color: Colors.amber,
-                      ),
-                    ),
-                    const Text("4.5", style: Styles.textStyle16),
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    const Text("(52145)", style: Styles.textStyle14),
-                  ],
+                const RatingWidget(
+                  axisAlignment: MainAxisAlignment.center,
                 ),
                 const SizedBox(
                   height: 37,

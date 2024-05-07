@@ -2,11 +2,12 @@ import 'package:bookly_app/core/styles.dart';
 import 'package:flutter/material.dart';
 
 class RatingWidget extends StatelessWidget {
-  const RatingWidget({super.key});
-
+  const RatingWidget({super.key, this.axisAlignment = MainAxisAlignment.start});
+  final MainAxisAlignment axisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: axisAlignment,
       children: [
         GestureDetector(
           child: const Icon(
