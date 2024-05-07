@@ -1,8 +1,8 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/also_like_list_view.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/book_action_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/rating_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -68,31 +68,7 @@ class BookPreviewView extends StatelessWidget {
                 const SizedBox(
                   height: 37,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomButton(
-                      color: Colors.white,
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      leftRadius: 20,
-                      text: "19.99 €",
-                      style: Styles.textStyle18.copyWith(
-                          color: Colors.black, fontWeight: FontWeight.bold),
-                    ),
-                    CustomButton(
-                      color: const Color(0xffEF8262),
-                      height: 50,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      rightRadius: 20,
-                      text: "Free preview",
-                      style: Styles.textStyle16.copyWith(
-                          color: Colors.white,
-                          fontFamily: gilroyFont,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
+                const BookActionWidget(),
                 const SizedBox(
                   height: 50,
                 ),
