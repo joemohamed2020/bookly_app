@@ -15,22 +15,22 @@ class BookActionWidget extends StatelessWidget {
       children: [
         CustomButton(
           backGroundColor: Colors.white,
-          borderRadius: const BorderRadius.horizontal(
-              left: Radius.circular(20)),
+          borderRadius:
+              const BorderRadius.horizontal(left: Radius.circular(20)),
           width: MediaQuery.of(context).size.width > 320
               ? 150
               : MediaQuery.of(context).size.width * 0.4,
           text: "19.99 €",
-          style: Styles.textStyle18.copyWith(
-              color: Colors.black, fontWeight: FontWeight.bold),
+          style: Styles.textStyle18
+              .copyWith(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         CustomButton(
           backGroundColor: const Color(0xffEF8262),
           width: MediaQuery.of(context).size.width > 320
               ? 150
               : MediaQuery.of(context).size.width * 0.4,
-          borderRadius: const BorderRadius.horizontal(
-              right: Radius.circular(20)),
+          borderRadius:
+              const BorderRadius.horizontal(right: Radius.circular(20)),
           text: "Free preview",
           style: Styles.textStyle16.copyWith(
               color: Colors.white,
