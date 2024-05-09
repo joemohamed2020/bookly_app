@@ -1,7 +1,9 @@
 import 'package:bookly_app/constants.dart';
+import 'package:bookly_app/core/app_router.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/best_seller_list_view_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/books_list_view_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -23,7 +25,9 @@ class HomeView extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 16.0, top: 16),
               child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouter.serachViewRoute);
+                  },
                   icon: const Icon(
                     Icons.search,
                     size: 28,

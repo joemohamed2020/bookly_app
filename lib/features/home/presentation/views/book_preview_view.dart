@@ -4,7 +4,9 @@ import 'package:bookly_app/features/home/presentation/views/widgets/also_like_li
 import 'package:bookly_app/features/home/presentation/views/widgets/book_action_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/rating_widget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 class BookPreviewView extends StatelessWidget {
@@ -41,57 +43,68 @@ class BookPreviewView extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.only(top: 36),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width * 0.284),
-                  child: BookWidget(width: MediaQuery.of(context).size.width),
-                ),
-                const SizedBox(
-                  height: 43,
-                ),
-                const Text("The Jungle Book", style: Styles.textStyle30),
-                const SizedBox(
-                  height: 8,
-                ),
-                Text("Rudyard Kipling",
-                    style: Styles.textStyle18
-                        .copyWith(fontStyle: FontStyle.italic)),
-                const SizedBox(
-                  height: 16,
-                ),
-                const RatingWidget(
-                  axisAlignment: MainAxisAlignment.center,
-                ),
-                const SizedBox(
-                  height: 37,
-                ),
-                const BookActionWidget(),
-                const SizedBox(
-                  height: 50,
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 30.0),
-                    child: Text(
-                      "You can also like",
-                      style: Styles.textStyle14
-                          .copyWith(fontWeight: FontWeight.w600),
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal:
+                              MediaQuery.of(context).size.width * 0.284),
+                      child:
+                          BookWidget(width: MediaQuery.of(context).size.width),
                     ),
-                  ),
+                    const SizedBox(
+                      height: 43,
+                    ),
+                    const Text("The Jungle Book", style: Styles.textStyle30),
+                    const SizedBox(
+                      height: 8,
+                    ),
+                    Text("Rudyard Kipling",
+                        style: Styles.textStyle18
+                            .copyWith(fontStyle: FontStyle.italic)),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const RatingWidget(
+                      axisAlignment: MainAxisAlignment.center,
+                    ),
+                    const SizedBox(
+                      height: 37,
+                    ),
+                    const BookActionWidget(),
+                    const Expanded(
+                      child: SizedBox(
+                        height: 50,
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 30.0),
+                        child: Text(
+                          "You can also like",
+                          style: Styles.textStyle14
+                              .copyWith(fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 16,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 30),
+                      child: AlsoLikeListView(),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    )
+                  ],
                 ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 30),
-                  child: AlsoLikeListView(),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),

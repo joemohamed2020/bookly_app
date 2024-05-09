@@ -16,6 +16,7 @@ class CustomListTile extends StatelessWidget {
       padding: const EdgeInsets.only(right: 8),
       child: GestureDetector(
         onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
           GoRouter.of(context).push(AppRouter.bookPreviewRoute);
         },
         child: Row(
