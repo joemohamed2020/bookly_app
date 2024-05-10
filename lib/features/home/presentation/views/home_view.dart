@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 30.0),
                   child: Text(
-                    "Best Seller",
+                    "Islamic Books",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
@@ -67,7 +67,7 @@ class HomeView extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.only(right: 51, left: 30),
-              child: BestSellerListViewWidget(),
+              child: IslamicListViewWidget(),
             ),
           )
         ]),
