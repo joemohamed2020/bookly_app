@@ -1,5 +1,5 @@
 import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/styles.dart';
+import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/also_like_list_view.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_action_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
