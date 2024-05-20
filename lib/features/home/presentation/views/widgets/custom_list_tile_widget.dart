@@ -23,6 +23,7 @@ class CustomListTile extends StatelessWidget {
           children: [
             BookWidget(
               width: MediaQuery.of(context).size.width * 0.19,
+              image:const AssetImage("assets/images/Book1.png")
             ),
             const SizedBox(
               width: 30,

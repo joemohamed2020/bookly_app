@@ -26,7 +26,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
         Tween<double>(begin: 0.0, end: 1.0).animate(animationController);
     await animationController.forward();
     // await Get.off(const HomeView(),transition: Transition.fade,duration: const Duration(seconds: 2));
-    GoRouter.of(context).push("/HomeView");
+    GoRouter.of(context).pushReplacement("/HomeView");
   }
 
   @override

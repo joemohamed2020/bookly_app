@@ -4,9 +4,7 @@ import 'package:bookly_app/features/home/presentation/views/widgets/also_like_li
 import 'package:bookly_app/features/home/presentation/views/widgets/book_action_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_widget.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/rating_widget.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 class BookPreviewView extends StatelessWidget {
@@ -53,7 +51,8 @@ class BookPreviewView extends StatelessWidget {
                           horizontal:
                               MediaQuery.of(context).size.width * 0.284),
                       child:
-                          BookWidget(width: MediaQuery.of(context).size.width),
+                          BookWidget(width: MediaQuery.of(context).size.width,image:const AssetImage("assets/images/Book1.png"),),
+
                     ),
                     const SizedBox(
                       height: 43,

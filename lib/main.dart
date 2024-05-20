@@ -2,7 +2,6 @@ import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/service_locator.dart';
 import 'package:bookly_app/features/home/presentation/manager/books_list_cubit/books_list_cubit.dart';
-import 'package:bookly_app/features/home/presentation/manager/islamic_books_cubit/islamic_books_list_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,15 +18,18 @@ class Bookly extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context)=>BooksListCubit(ServiceLocator.homeRepoImpl)),
-        BlocProvider(create: (context)=>IslamicBooksListCubit(ServiceLocator.homeRepoImpl)),
+                BlocProvider(
+            create: (context) =>
+                BooksListCubit(ServiceLocator.homeRepoImpl)..fetchBooksList())
+                ,
       ],
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark().copyWith(
           scaffoldBackgroundColor: kBackgroundColor,
-          textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+          textTheme:
+              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
         ),
       ),
     );

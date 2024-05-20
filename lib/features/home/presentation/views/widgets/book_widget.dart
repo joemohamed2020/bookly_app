@@ -9,9 +9,11 @@ class BookWidget extends StatelessWidget {
     super.key,
     this.playbutton = false,
     required this.width,
+    required this.image,
   });
   final double width;
   final bool playbutton;
+  final ImageProvider<Object> image;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,10 +28,11 @@ class BookWidget extends StatelessWidget {
             aspectRatio: aspect,
             child: Stack(children: [
               Container(
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/images/Book3.png"),
+                    image: image,
                   ),
                 ),
               ),
