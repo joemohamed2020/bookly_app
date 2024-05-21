@@ -51,7 +51,7 @@ class BookPreviewView extends StatelessWidget {
                           horizontal:
                               MediaQuery.of(context).size.width * 0.284),
                       child:
-                          BookWidget(width: MediaQuery.of(context).size.width,image:const AssetImage("assets/images/Book1.png"),),
+                          BookWidget(width: MediaQuery.of(context).size.width,image:"https://st.depositphotos.com/1741875/1237/i/380/depositphotos_12376816-stock-photo-stack-of-old-books.jpg",),
 
                     ),
                     const SizedBox(

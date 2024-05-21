@@ -15,7 +15,7 @@ class AlsoLikeListView extends StatelessWidget {
         itemBuilder: (context, index) {
           return BookWidget(
               width: MediaQuery.of(context).size.width * 0.19,
-              image: const AssetImage("assets/images/Book1.png"));
+              image:"https://st.depositphotos.com/1741875/1237/i/380/depositphotos_12376816-stock-photo-stack-of-old-books.jpg");
         },
       ),
     );

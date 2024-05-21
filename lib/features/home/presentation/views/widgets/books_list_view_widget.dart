@@ -26,8 +26,8 @@ class BooksListViewWidget extends StatelessWidget {
                   return BookWidget(
                     width: MediaQuery.of(context).size.width * 0.4,
                     playbutton: true,
-                    image: NetworkImage(
-                        state.books[index].volumeInfo!.imageLinks!.thumbnail!),
+                    image: 
+                        state.books[index].volumeInfo.imageLinks.thumbnail,
                   );
                 },
               ));
